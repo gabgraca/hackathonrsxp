@@ -16,7 +16,7 @@ export const Container = styled.div`
     li {
       display: flex;
       flex-direction: column;
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.8);
       box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
       padding: 30px;
 
