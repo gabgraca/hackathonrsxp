@@ -9,7 +9,7 @@ import {
 import Login from '../screen/Login'
 
 import Home from '../screen/Home'
-import StudentRegister from '../screen/StudentRegister'
+import RegisterUserContainer from './RegisterUserContainer'
 import CompanyRegister from '../screen/CompanyRegister'
 
 import Visit from '../screen/Visit'
@@ -32,7 +32,7 @@ function RoutesContainer() {
                     <Home />
                 </Route>
                 <Route exact path="/studentRegister">
-                    <StudentRegister />
+                    <RegisterUserContainer />
                 </Route>
                 <Route exact path="/companyRegister">
                     <CompanyRegister />

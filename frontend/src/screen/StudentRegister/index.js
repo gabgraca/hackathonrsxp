@@ -2,26 +2,29 @@ import React, { useState, useEffect } from 'react';
 
 import { 
   Container,
-  Form,
+  FormContainer,
   Title,
-  Input,
+  InputItem,
   Button,
 } from './styles';
 import Header from '../../components/Header'
 
-export default function StudentRegister() {
+export default function StudentRegister({
+  user,
+  registerUser
+}) {
   return (
     <Container>
       <Header />
 
-      <Form>
+      <FormContainer onSubmit={(e) => registerUser(e)}>
         <Title>Cadastro do aluno</Title>
-        <Input name='email' type='email' placeholder="Seu email" />
-        <Input name='name' type='text' placeholder="Seu nome"/>
-        <Input name='cpf' type='text' placeholder="Seu CPF"/>
-        <Input name='file' type='file' placeholder="Anexar comprovante de matrícula"/>
-        <Button>Cadastrar</Button>
-      </Form>
+        <InputItem name='email' type='email' placeholder="Seu email" />
+        <InputItem name='nome' type='text' placeholder="Seu nome"/>
+        <InputItem name='cpf' type='text' placeholder="Seu CPF"/>
+        <InputItem name='file' type='file' placeholder="Anexar comprovante de matrícula"/>
+        <Button >Cadastrar</Button>
+      </FormContainer>
 
     </Container>
   )
