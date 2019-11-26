@@ -14,10 +14,10 @@ function RoutesContainer() {
     return (
         <Router>
             <Switch>
-                <Route exact path="/">
+                <Route path="/login">
                     <Login />
                 </Route>
-                <Route path="/register">
+                <Route exact path="/">
                     <Register />
                 </Route>
                 <Route path="/list">

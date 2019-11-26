@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-// import { Container } from './styles';
+import { 
+  Container,
+  ContainerForm,
+  Img,
+  Input,
+  Button,
+} from './styles';
+import Header from '../../components/Header'
 
 export default function Register() {
   return (
-    <div>
-        <p>Register</p>
-    </div>
-  );
+    <Container>
+      <Header />
+    </Container>
+  )
 }
