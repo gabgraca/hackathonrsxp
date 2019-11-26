@@ -18,7 +18,7 @@ export const Form = styled.form`
 `
 
 export const Title = styled.h2`
-    color: #000;
+    color: #FFF;
     font-size: 28px;
 `
 

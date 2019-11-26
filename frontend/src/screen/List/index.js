@@ -34,6 +34,30 @@ export default function List() {
             </p>
             <button>Inscrever-se</button>
           </li>
+          <li>
+            <span>Uber Technologies</span>
+            <p>
+              Empresa de tecnolgia que que faz intermédio de serviço de taxe
+              entre motorista e passageiro.
+            </p>
+            <button>Inscrever-se</button>
+          </li>
+          <li>
+            <span>Uber Technologies</span>
+            <p>
+              Empresa de tecnolgia que que faz intermédio de serviço de taxe
+              entre motorista e passageiro.
+            </p>
+            <button>Inscrever-se</button>
+          </li>
+          <li>
+            <span>Uber Technologies</span>
+            <p>
+              Empresa de tecnolgia que que faz intermédio de serviço de taxe
+              entre motorista e passageiro.
+            </p>
+            <button>Inscrever-se</button>
+          </li>
         </ul>
       </Container>
     </>
