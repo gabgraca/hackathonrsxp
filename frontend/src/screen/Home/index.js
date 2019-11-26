@@ -22,7 +22,7 @@ export default function Home() {
         <div className='bar'></div>
         <CaixaBotao>
           <strong>Quero fornecer uma experiência para alunos do ensino médio</strong>
-          <Link to='/studentRegister/'>Cadastrar-se como empresa</Link>
+          <Link to='/companyRegister/'>Cadastrar-se como empresa</Link>
         </CaixaBotao>
       </Subcontainer>
     </Container>
