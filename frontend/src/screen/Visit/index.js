@@ -1,25 +1,32 @@
 import React from 'react';
+import ReactDate from '../../components/ReactDate'
 
 import { 
   Container,
-  Form,
+  Rsform,
   Title,
-  Input,
+  Rsinput,
   Button,
 } from './styles';
 import Header from '../../components/Header'
 
+function handleSubmit(data){
+  console.log(data);
+}
 export default function Visit() {
+
+  
+
   return (
-    <Container>
+    <Container className="Container">
       <Header />
 
-      <Form>
+      <Rsform id="dados" onSubmit={handleSubmit} >
         <Title>Cadastro de Visita</Title>
-        <Input name='data' type='email' placeholder="Data formato YYYY-MM-DD" />
-        <Input name='vagas' type='text' placeholder="Quantidade de vagas"/>
-        <Button>Cadastrar</Button>
-      </Form>
+        <ReactDate name='data' type='email' placeholder="Data formato YYYY-MM-DD" />
+        <Rsinput name='vagas' type='text' placeholder="Quantidade de vagas" /*handleInputChange={e => setDate(e)}*//>
+        <Button type="submit" form="dados">Cadastrar</Button>
+      </Rsform>
     </Container>
   )
 }
