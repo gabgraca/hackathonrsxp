@@ -1,7 +1,7 @@
 import React from 'react'
 import history from '../services/history';
 import {
-    BrowserRouter as Router,
+    Router,
     Switch,
     Route,
 } from "react-router-dom"
