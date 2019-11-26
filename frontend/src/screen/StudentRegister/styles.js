@@ -2,28 +2,28 @@ import styled from 'styled-components'
 import logo from '../../assets/Logo.svg'
 
 export const Container = styled.div`
-    height: 400px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 `
 
-export const ContainerForm = styled.div`
+export const Form = styled.form`
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-width: 400px;
     width: 100%;
+    min-height: calc(100vh - 80px);
 `
 
-export const Img = styled.img.attrs({
-    alt: 'Logo image',
-    src: logo
-})`
-    width: 180px;
-    height: auto;
+export const Title = styled.h2`
+    color: #000;
+    font-size: 28px;
 `
 
 export const Input = styled.input.attrs({
-    placeholder: 'Seu email'
+    
 })`
     width: 287px;
     height: 50px;

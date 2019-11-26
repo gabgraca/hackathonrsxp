@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 export const MenuItems = styled.div`
     display: flex;
+    padding: 10px;
     flex-direction: row;
     max-width: 1100px;
     width: 100%;
