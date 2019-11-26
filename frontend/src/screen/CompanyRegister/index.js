@@ -25,7 +25,6 @@ export default function CompanyRegister() {
 
         <Button>Cadastrar</Button>
       </Form>
-
     </Container>
   )
 }
