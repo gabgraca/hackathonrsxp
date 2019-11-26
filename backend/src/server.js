@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const cors = require('cors')
 
 class server {
   constructor() {
@@ -18,6 +19,7 @@ class server {
   }
   middlewares() {
     this.express.use(express.json());
+    this.express.use(cors());
     this.express.use(routes);
   }
 }

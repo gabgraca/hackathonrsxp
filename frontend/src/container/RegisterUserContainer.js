@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import StudentRegister from '../screen/StudentRegister'
+import api from '../services/api'
+
 // import { Container } from './styles';
 
 export default function RegisterUserContainer() {
@@ -7,10 +9,20 @@ export default function RegisterUserContainer() {
     const [user, setUser] = useState({})
   
 
-    function registerUser(data) {
-        data.matricula = 111111
-        delete data.file
-        setUser(data)
+    async function registerUser(user) {
+        user.matricula = 111111
+        delete user.file
+        setUser(user)
+
+        try {
+            const { data } = await api.post('/aluno', user)
+
+            console.log(data)
+
+        } catch(error) {
+            console.log(error)
+        }
+
     }
 
 
