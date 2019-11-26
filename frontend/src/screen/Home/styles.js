@@ -1,18 +1,15 @@
 import styled from 'styled-components'
 import logo from '../../assets/Logo.svg'
+import backgroundImage from '../../assets/background.png'
+
 
 export const Container = styled.div`
-    height: 400px;
+    height: 100vh;
+    background-image:url(${backgroundImage});
+    
 `
 
-export const ContainerForm = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 400px;
-    width: 100%;
-`
+
 
 export const Img = styled.img.attrs({
     alt: 'Logo image',
@@ -55,27 +52,46 @@ export const Subcontainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 650px;
+  max-width: 1100px;
+  width:100%;
   height: 300px;
   margin: 100px auto;
 
+  .bar{
+    width: 2px;
+    height: 100px;
+    margin-top: 50px;
+    background: #fff;
+  }
 `;
 
 export const CaixaBotao = styled.div`
-  width: 300px;
-  height: 300px;
-  background: #FFF;
+  width: 545px;
+  height: 400px;
   padding: 40px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   align-content: center;
+  align-items: center;
+
   strong {
-    font-size: 24px;
-    text-align: center;
+    font-size: 40px;
+    text-align: left;
+    color: #FFFFFF;
   }
-  button{
-    width: 100%;
+
+  a{
+    width: 250px;
+    height: 100px;
     margin-top: auto;
+    color: #FFFFFF;
+    text-decoration:none;
+    border: 2px solid #FFF;
+    
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
