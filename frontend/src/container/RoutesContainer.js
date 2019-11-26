@@ -9,6 +9,8 @@ import Login from '../screen/Login'
 
 import Home from '../screen/Home'
 import StudentRegister from '../screen/StudentRegister'
+import CompanyRegister from '../screen/CompanyRegister'
+
 import List from '../screen/List'
 
 function RoutesContainer() {
@@ -24,6 +26,9 @@ function RoutesContainer() {
                 </Route>
                 <Route exact path="/studentRegister">
                     <StudentRegister />
+                </Route>
+                <Route exact path="/companyRegister">
+                    <CompanyRegister />
                 </Route>
                 <Route path="/list">
                     <List />
