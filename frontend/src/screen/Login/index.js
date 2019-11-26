@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
-// import { Container } from './styles';
+import { 
+  Container,
+  ContainerForm,
+  Img,
+  Input,
+  Button,
+} from './styles';
 
 export default function Login() {
   return (
-    <div>
-        <p>Login</p>
-    </div>
+    <Container>
+        <ContainerForm>
+          <Img />
+          <Input />
+          <Button>Login</Button>
+        </ContainerForm>
+    </Container>
   )
 }
