@@ -1,4 +1,5 @@
 import React from 'react'
+import history from '../services/history';
 import {
     BrowserRouter as Router,
     Switch,
@@ -13,10 +14,11 @@ import CompanyRegister from '../screen/CompanyRegister'
 
 import List from '../screen/List'
 
+
 function RoutesContainer() {
 
     return (
-        <Router>
+        <Router history={history}>
             <Switch>
                 <Route path="/login">
                     <Login />
