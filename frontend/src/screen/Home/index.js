@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
-import history from '../../services/history';
 import { 
   Container,
-  Button,
   Subcontainer,
   CaixaBotao
 } from './styles';
