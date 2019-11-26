@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import logo from '../../assets/Logo.svg'
 
 export const Container = styled.div`
     height: 100%;
