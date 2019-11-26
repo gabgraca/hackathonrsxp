@@ -13,6 +13,10 @@ const EmpresaSchema = new mongoose.Schema({
   },
   descricao: {
     type: String
+  },
+  empresa: {
+    type: Boolean,
+    default: true
   }
 });
 
