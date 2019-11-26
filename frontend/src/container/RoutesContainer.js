@@ -7,6 +7,7 @@ import {
 
 import Login from '../screen/Login'
 import Register from '../screen/Register'
+import Home from '../screen/Home'
 import List from '../screen/List'
 
 function RoutesContainer() {
@@ -18,7 +19,7 @@ function RoutesContainer() {
                     <Login />
                 </Route>
                 <Route exact path="/">
-                    <Register />
+                    <Home />
                 </Route>
                 <Route path="/list">
                     <List />
