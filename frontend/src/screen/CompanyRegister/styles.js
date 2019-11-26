@@ -51,6 +51,7 @@ export const TextArea = styled.textarea`
     border: none;
     padding: 0 20px;
     margin-top: 20px;
+    resize: none;
 `
 
 export const Button = styled.button.attrs({
