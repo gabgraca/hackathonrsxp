@@ -3,20 +3,26 @@ import styled from "styled-components";
 import logo from "../../assets/Logo.svg";
 
 export const Container = styled.div`
-  background: #fff;
-  width: 100%;
-  height: 80px;
+  background: rgba(255, 255, 255, 0.75);
 `;
 
 export const MenuItems = styled.div`
-  display: flex;
-  padding: 10px;
-  flex-direction: row;
-  max-width: 1100px;
   width: 100%;
-  justify-content: space-between;
+  height: 80px;
+
   margin: 0 auto;
+
   align-items: center;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+
+  a {
+    color: #444;
+    font-weight: bold;
+    text-decoration: none;
+  }
 `;
 
 export const Logo = styled.img.attrs({
@@ -25,4 +31,6 @@ export const Logo = styled.img.attrs({
 })`
   height: 75px;
   width: auto;
+  display: flex;
+  align-items: center;
 `;

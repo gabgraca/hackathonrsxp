@@ -1,63 +1,59 @@
-import styled from 'styled-components'
-import logo from '../../assets/Logo.svg'
-import backgroundImage from '../../assets/background.png'
-
+import styled from "styled-components";
+import logo from "../../assets/Logo.svg";
+import backgroundImage from "../../assets/background.png";
 
 export const Container = styled.div`
-    height: 100vh;
-    background-image:url(${backgroundImage});
-    
-`
-
-
+  height: 100vh;
+  background-image: url(${backgroundImage});
+`;
 
 export const Img = styled.img.attrs({
-    alt: 'Logo image',
-    src: logo
+  alt: "Logo image",
+  src: logo
 })`
-    width: 180px;
-    height: auto;
-`
+  width: 180px;
+  height: auto;
+`;
 
 export const Input = styled.input.attrs({
-    placeholder: 'Seu email'
+  placeholder: "Seu email"
 })`
-    width: 287px;
-    height: 50px;
-    font-size: 18px;
+  width: 287px;
+  height: 50px;
+  font-size: 18px;
+  color: #a0a0a0;
+  background: #fff;
+  &::placeholder {
     color: #a0a0a0;
-    background: #FFF;
-    &::placeholder {
-        color: #a0a0a0;
-        font-size: 18px;
-    }
-    border: none;
-    padding: 0 20px;
-    margin-top: 20px;
-`
+    font-size: 18px;
+  }
+  border: none;
+  padding: 0 20px;
+  margin-top: 20px;
+`;
 
 export const Button = styled.button.attrs({
-    type: 'button'
+  type: "button"
 })`
-    width: 287px;
-    height: 50px;
-    font-size: 18px;
-    color: #FFF;
-    background: #7A72Bf;
-    border: 0;
-    margin-top: 20px;
-`
+  width: 287px;
+  height: 50px;
+  font-size: 18px;
+  color: #fff;
+  background: #7a72bf;
+  border: 0;
+  margin-top: 20px;
+`;
 
 export const Subcontainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   max-width: 1100px;
-  width:100%;
+  width: 100%;
   height: 300px;
   margin: 100px auto;
 
-  .bar{
+  .bar {
     width: 2px;
     height: 100px;
     margin-top: 50px;
@@ -77,21 +73,26 @@ export const CaixaBotao = styled.div`
   strong {
     font-size: 40px;
     text-align: left;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
-  a{
+  a {
     width: 250px;
     height: 100px;
     margin-top: auto;
-    color: #FFFFFF;
-    text-decoration:none;
-    border: 2px solid #FFF;
-    
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #fff;
+
     font-size: 20px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #7a72bf;
+    }
   }
 `;

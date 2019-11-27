@@ -1,30 +1,23 @@
-import React from 'react';
+import React from "react";
 
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-import { 
-    Container,
-    MenuItems,
-    Logo,
-} from './styles'
+import history from "../../services/history";
 
-export default function Header({
-    isLogedIn = false
-}) {
+import { Container, MenuItems, Logo } from "./styles";
+
+export default function Header({ isLogedIn = false }) {
   return (
-     <Container>
-         <MenuItems>
-            <Logo />
-            { isLogedIn && (
-                <p>items</p>
-            )}
+    <Container>
+      <MenuItems>
+        <Link to="/">
+          <Logo />
+        </Link>
 
+        {isLogedIn && <p>items</p>}
 
-            {!isLogedIn && (
-                <Link to="/login">Login</Link>
-            )}
-
-         </MenuItems>
-     </Container>
+        {!isLogedIn && <Link to="/login">Login</Link>}
+      </MenuItems>
+    </Container>
   );
 }
