@@ -12,7 +12,7 @@ export default function Login() {
   return (
     <Container>
         <ContainerForm>
-          <strong>Inscrição realizada com sucesso!</strong>
+          <strong>Cadastro realizado com sucesso!</strong>
         </ContainerForm>
     </Container>
   )
