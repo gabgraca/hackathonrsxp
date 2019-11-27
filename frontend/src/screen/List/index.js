@@ -2,7 +2,9 @@ import React, {useState, useEffect} from "react";
 
 import Header from "../../components/Header";
 import api from '../../services/api';
+import history from '../../services/history';
 import { Container } from "./styles";
+
 
 
 export default function List() {
@@ -47,7 +49,7 @@ export default function List() {
               Empresa de tecnolgia que que faz intermédio de serviço de taxe
               entre motorista e passageiro.
             </p>
-            <button>Inscrever-se</button>
+            <button type="button" onClick={() => history.push('/RegisterSuccess')}>Inscrever-se</button>
           </li>
           <li>
             <p>

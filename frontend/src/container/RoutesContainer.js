@@ -11,7 +11,7 @@ import Login from '../screen/Login'
 import Home from '../screen/Home'
 import RegisterUserContainer from './RegisterUserContainer'
 import CompanyList from '../screen/CompanyList'
-
+import RegisterSuccess from '../screen/RegisterSuccess'
 import List from '../screen/List'
 import VisitCotainer from './VisitContainer';
 import Visit from '../screen/Visit'
@@ -45,6 +45,9 @@ function RoutesContainer() {
                 </Route>
                 <Route path="/companylist">
                     <CompanyList />
+                </Route>
+                <Route path="/registersuccess">
+                    <RegisterSuccess />
                 </Route>
             </Switch>
         </Router>  
