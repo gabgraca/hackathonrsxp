@@ -18,14 +18,16 @@ export default function VisitCotainer() {
      
                  if(aluno.data !== null) {
                     history.push(`/list/${aluno.data.email}`)
+                    return
                  }
      
                  if(company.data !== null) {
                     history.push(`/companyList/${company.data.email}`)
+                    return
                  }
 
                  //TODO when user not found
-                 //history.push('/')
+                 history.push('/')
      
              } catch(error) {
                  console.log(error)
