@@ -8,6 +8,7 @@ class OportunidadeController {
       vagas,
       data
     });
+    await oportunidade.populate("empresa").execPopulate();
     return res.json(oportunidade);
   }
 
@@ -35,8 +36,15 @@ class OportunidadeController {
   }
 
   async index(req, res) {
-    const oportunidade = await Oportunidade.find();
-    return res.json(oportunidade);
+    const { empresa } = req.params;
+    await Oportunidade.find({ empresa })
+      .populate("empresa")
+      .exec((err, doc) => {
+        if (err) {
+          return console.error(err);
+        }
+        return res.json(doc);
+      });
   }
 }
 

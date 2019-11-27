@@ -16,7 +16,7 @@ routes.get("/empresas", EmpresaController.index);
 routes.get("/empresa/:email", EmpresaController.show);
 
 routes.post("/oportunidade", OportunidadeController.store);
-routes.get("/oportunidades", OportunidadeController.index);
+routes.get("/oportunidades/:empresa", OportunidadeController.index);
 routes.post("/inscricao", OportunidadeController.inscricao);
 
 routes.get("/login/:email", SignController.signin);

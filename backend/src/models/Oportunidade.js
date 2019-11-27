@@ -10,8 +10,9 @@ const OportunidadeSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  Data: {
-    type: Date
+  data: {
+    type: Date,
+    required: true
   },
   participantes: [
     {
