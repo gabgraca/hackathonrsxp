@@ -1,98 +1,26 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "../../components/Header";
+import { useParams } from "react-router-dom";
 
 import { Container } from "./styles";
 
-export default function CompanyList({
-  opportunities,
-  company,
-}) {
+export default function CompanyList({ opportunities, company }) {
+  const [{ email }] = useState(useParams());
 
   return (
     <>
       <Header />
       <Container>
-      <Link to="/visit">Adicionar nova visita</Link>
+        <Link to={`/visit/${email}`}>Adicionar nova visita</Link>
         <ul>
-          {/**
-            companyList.map(clist => (
+          {opportunities.map(clist => (
             <li>
-            <span>{clist.nomedaempresa}</span>
-            <strong>{clist.data}</strong>
-            <p>
-              clist.descricao
-            </p>
-           
-          </li>
-           )) 
-           */}
-        <li>
-            <p>
-              02/01/2020
-            </p>
-            <span>Uber Technologies</span>
-            <p>
-              Empresa de tecnolgia que que faz intermédio de serviço de taxe
-              entre motorista e passageiro.
-            </p>
-           
-          </li>
-          <li>
-            <p>
-              02/01/2020
-            </p>
-            <span>Uber Technologies</span>
-            <p>
-              Empresa de tecnolgia que que faz intermédio de serviço de taxe
-              entre motorista e passageiro.
-            </p>
-           
-          </li>
-          <li>
-            <p>
-              02/01/2020
-            </p>
-            <span>Uber Technologies</span>
-            <p>
-              Empresa de tecnolgia que que faz intermédio de serviço de taxe
-              entre motorista e passageiro.
-            </p>
-           
-          </li>
-          <li>
-            <p>
-              02/01/2020
-            </p>
-            <span>Uber Technologies</span>
-            <p>
-              Empresa de tecnolgia que que faz intermédio de serviço de taxe
-              entre motorista e passageiro.
-            </p>
-           
-          </li>
-          <li>
-            <p>
-              02/01/2020
-            </p>
-            <span>Uber Technologies</span>
-            <p>
-              Empresa de tecnolgia que que faz intermédio de serviço de taxe
-              entre motorista e passageiro.
-            </p>
-           
-          </li>
-          <li>
-            <p>
-              02/01/2020
-            </p>
-            <span>Uber Technologies</span>
-            <p>
-              Empresa de tecnolgia que que faz intermédio de serviço de taxe
-              entre motorista e passageiro.
-            </p>
-           
-          </li>
+              <span>{clist.empresa.nome}</span>
+              <strong>{clist.vagas}</strong>
+              <p>clist.empresa.descricao</p>
+            </li>
+          ))}
         </ul>
       </Container>
     </>
