@@ -1,17 +1,48 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from 'react-router-dom';
 import Header from "../../components/Header";
+import api from '../../services/api';
 
 import { Container } from "./styles";
 
 export default function CompanyList() {
+
+  const [companyList, setCompanyList] = useState([]);
+
+  //Implementar a leitura da API de lista de vagas da empresa
+
+  useEffect(() => {
+
+    // api.get()....
+    // Format Date ??
+    // setCompanyList()...
+
+
+  }, []);
+
+
   return (
     <>
       <Header />
       <Container>
       <Link to="/visit">Adicionar nova visita</Link>
         <ul>
+          {/**
+            companyList.map(clist => (
+            <li>
+            <span>{clist.nomedaempresa}</span>
+            <strong>{clist.data}</strong>
+            <p>
+              clist.descricao
+            </p>
+           
+          </li>
+           )) 
+           */}
         <li>
+            <p>
+              02/01/2020
+            </p>
             <span>Uber Technologies</span>
             <p>
               Empresa de tecnolgia que que faz intermédio de serviço de taxe
@@ -20,6 +51,9 @@ export default function CompanyList() {
            
           </li>
           <li>
+            <p>
+              02/01/2020
+            </p>
             <span>Uber Technologies</span>
             <p>
               Empresa de tecnolgia que que faz intermédio de serviço de taxe
@@ -28,6 +62,9 @@ export default function CompanyList() {
            
           </li>
           <li>
+            <p>
+              02/01/2020
+            </p>
             <span>Uber Technologies</span>
             <p>
               Empresa de tecnolgia que que faz intermédio de serviço de taxe
@@ -36,6 +73,9 @@ export default function CompanyList() {
            
           </li>
           <li>
+            <p>
+              02/01/2020
+            </p>
             <span>Uber Technologies</span>
             <p>
               Empresa de tecnolgia que que faz intermédio de serviço de taxe
@@ -44,6 +84,20 @@ export default function CompanyList() {
            
           </li>
           <li>
+            <p>
+              02/01/2020
+            </p>
+            <span>Uber Technologies</span>
+            <p>
+              Empresa de tecnolgia que que faz intermédio de serviço de taxe
+              entre motorista e passageiro.
+            </p>
+           
+          </li>
+          <li>
+            <p>
+              02/01/2020
+            </p>
             <span>Uber Technologies</span>
             <p>
               Empresa de tecnolgia que que faz intermédio de serviço de taxe
