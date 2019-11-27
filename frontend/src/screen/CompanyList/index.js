@@ -1,22 +1,23 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 import Header from "../../components/Header";
 
 import { Container } from "./styles";
 
-export default function List() {
+export default function CompanyList() {
   return (
     <>
       <Header />
-      <Container>        
+      <Container>
+      <Link to="/visit">Adicionar nova visita</Link>
         <ul>
-          <li>
+        <li>
             <span>Uber Technologies</span>
             <p>
               Empresa de tecnolgia que que faz intermédio de serviço de taxe
               entre motorista e passageiro.
             </p>
-            <button>Inscrever-se</button>
+           
           </li>
           <li>
             <span>Uber Technologies</span>
@@ -24,7 +25,7 @@ export default function List() {
               Empresa de tecnolgia que que faz intermédio de serviço de taxe
               entre motorista e passageiro.
             </p>
-            <button>Inscrever-se</button>
+           
           </li>
           <li>
             <span>Uber Technologies</span>
@@ -32,7 +33,7 @@ export default function List() {
               Empresa de tecnolgia que que faz intermédio de serviço de taxe
               entre motorista e passageiro.
             </p>
-            <button>Inscrever-se</button>
+           
           </li>
           <li>
             <span>Uber Technologies</span>
@@ -40,7 +41,7 @@ export default function List() {
               Empresa de tecnolgia que que faz intermédio de serviço de taxe
               entre motorista e passageiro.
             </p>
-            <button>Inscrever-se</button>
+           
           </li>
           <li>
             <span>Uber Technologies</span>
@@ -48,15 +49,7 @@ export default function List() {
               Empresa de tecnolgia que que faz intermédio de serviço de taxe
               entre motorista e passageiro.
             </p>
-            <button>Inscrever-se</button>
-          </li>
-          <li>
-            <span>Uber Technologies</span>
-            <p>
-              Empresa de tecnolgia que que faz intermédio de serviço de taxe
-              entre motorista e passageiro.
-            </p>
-            <button>Inscrever-se</button>
+           
           </li>
         </ul>
       </Container>
