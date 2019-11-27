@@ -1,25 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 import Header from "../../components/Header";
-import api from '../../services/api';
 
 import { Container } from "./styles";
 
-export default function CompanyList() {
-
-  const [companyList, setCompanyList] = useState([]);
-
-  //Implementar a leitura da API de lista de vagas da empresa
-
-  useEffect(() => {
-
-    // api.get()....
-    // Format Date ??
-    // setCompanyList()...
-
-
-  }, []);
-
+export default function CompanyList({
+  opportunities,
+  company,
+}) {
 
   return (
     <>
