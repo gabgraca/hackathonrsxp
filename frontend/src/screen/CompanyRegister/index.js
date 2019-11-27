@@ -2,29 +2,31 @@ import React from 'react';
 
 import { 
   Container,
-  Form,
+  FormContainer,
   Title,
-  Input,
-  TextArea,
+  InputItem,
+  TextAreaItem,
   Button,
 } from './styles';
 import Header from '../../components/Header'
 
-export default function CompanyRegister() {
+export default function CompanyRegister({
+  registerCompany
+}) {
   return (
     <Container>
       <Header />
 
-      <Form>
+      <FormContainer onSubmit={registerCompany}>
         <Title>Cadastro de empresa</Title>
-        <Input name='email' type='email' placeholder="Email do contato" />
-        <Input name='name' type='text' placeholder="Nome da empresa"/>
-        <Input name='cnpj' type='text' placeholder="CNPJ"/>
+        <InputItem name='email' type='email' placeholder="Email do contato" />
+        <InputItem name='nome' type='text' placeholder="Nome da empresa"/>
+        <InputItem name='cnpj' type='text' placeholder="CNPJ"/>
         
-        <TextArea cols={33} rows={5} >Breve descrição da empresa</TextArea>
+        <TextAreaItem name='descricao' cols={33} rows={5} ></TextAreaItem>
 
         <Button>Cadastrar</Button>
-      </Form>
+      </FormContainer>
     </Container>
   )
 }

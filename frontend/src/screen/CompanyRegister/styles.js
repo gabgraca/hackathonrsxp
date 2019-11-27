@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Form, Input, Textarea } from '@rocketseat/unform'
 
 export const Container = styled.div`
     height: 100%;
@@ -7,7 +8,7 @@ export const Container = styled.div`
     justify-content: center;
 `
 
-export const Form = styled.form`
+export const FormContainer = styled(Form)`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +22,7 @@ export const Title = styled.h2`
     font-size: 28px;
 `
 
-export const Input = styled.input.attrs({
+export const InputItem = styled(Input).attrs({
     
 })`
     width: 287px;
@@ -38,7 +39,9 @@ export const Input = styled.input.attrs({
     margin-top: 20px;
 `
 
-export const TextArea = styled.textarea`
+export const TextAreaItem = styled(Textarea).attrs({
+    placeholder: 'Breve descrição da empresa'
+})`
     width: 287px;
     font-size: 18px;
     color: #a0a0a0;
@@ -54,7 +57,7 @@ export const TextArea = styled.textarea`
 `
 
 export const Button = styled.button.attrs({
-    type: 'button'
+    type: 'submit'
 })`
     width: 287px;
     height: 50px;

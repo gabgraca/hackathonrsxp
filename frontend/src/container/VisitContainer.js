@@ -17,11 +17,11 @@ export default function VisitCotainer() {
                 const company = await api.get(`/empresa/${email}`, email)
      
                  if(aluno.data !== null) {
-                     console.log('é aluno')
+                    history.push(`/list/${aluno.data.email}`)
                  }
      
                  if(company.data !== null) {
-                     console.log('é empresa')
+                    history.push(`/companyList/${company.data.email}`)
                  }
 
                  //TODO when user not found
