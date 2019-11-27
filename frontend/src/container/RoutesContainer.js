@@ -13,10 +13,9 @@ import RegisterUserContainer from './RegisterUserContainer'
 import CompanyRegister from '../screen/CompanyRegister'
 import CompanyList from '../screen/CompanyList'
 
-import Visit from '../screen/Visit'
-
 import List from '../screen/List'
-
+import VisitCotainer from './VisitContainer';
+import Visit from '../screen/Visit'
 
 function RoutesContainer() {
 
@@ -28,6 +27,9 @@ function RoutesContainer() {
                 </Route>
                 <Route path="/visit">
                     <Visit />
+                </Route>
+                <Route path="/visitContainer/:email">
+                    <VisitCotainer />
                 </Route>
                 <Route exact path="/">
                     <Home />
