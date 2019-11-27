@@ -24,7 +24,7 @@ function RoutesContainer() {
                 <Route path="/login">
                     <LoginContainer />
                 </Route>
-                <Route path="/visit">
+                <Route path="/visit/:email">
                     <Visit />
                 </Route>
                 <Route path="/visitContainer/:email">
