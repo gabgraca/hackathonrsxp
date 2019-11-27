@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import logo from '../../assets/Logo.svg'
+import {Form, Input} from '@rocketseat/unform';
 
 export const Container = styled.div`
     height: 100%;
@@ -7,13 +9,31 @@ export const Container = styled.div`
     justify-content: center;
 `
 
-export const Form = styled.form`
+export const Rsform = styled(Form)`
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     min-height: calc(100vh - 80px);
+
+    .react-datepicker__input-container {
+    input {
+        width: 287px;
+        height: 50px;
+        font-size: 18px;
+        color: #a0a0a0;
+        background: #FFF;
+        &::placeholder {
+            color: #a0a0a0;
+            font-size: 18px;
+        }
+        border: none;
+        padding: 0 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+  }
 `
 
 export const Title = styled.h2`
@@ -21,7 +41,7 @@ export const Title = styled.h2`
     font-size: 28px;
 `
 
-export const Input = styled.input.attrs({
+export const Rsinput = styled(Input).attrs({
     
 })`
     width: 287px;
@@ -36,6 +56,7 @@ export const Input = styled.input.attrs({
     border: none;
     padding: 0 20px;
     margin-top: 20px;
+    text-align: center;
 `
 
 export const TextArea = styled.textarea`
@@ -54,7 +75,7 @@ export const TextArea = styled.textarea`
 `
 
 export const Button = styled.button.attrs({
-    type: 'button'
+    //type: 'button'
 })`
     width: 287px;
     height: 50px;
