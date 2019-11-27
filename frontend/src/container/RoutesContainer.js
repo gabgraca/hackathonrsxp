@@ -8,13 +8,14 @@ import {
 
 import Home from '../screen/Home'
 import RegisterUserContainer from './RegisterUserContainer'
-import CompanyList from '../screen/CompanyList'
+
 import RegisterSuccess from '../screen/RegisterSuccess'
 import List from '../screen/List'
 import VisitCotainer from './VisitContainer';
 import Visit from '../screen/Visit'
 import RegisterCompanyContainer from './RegisterCompanyContainer';
 import LoginContainer from './LoginContainer';
+import CompanyContainer from './CompanyContainer'
 
 function RoutesContainer() {
 
@@ -42,8 +43,8 @@ function RoutesContainer() {
                 <Route path="/list">
                     <List />
                 </Route>
-                <Route path="/companylist">
-                    <CompanyList />
+                <Route path="/companylist/:email">
+                    <CompanyContainer />
                 </Route>
                 <Route path="/registersuccess">
                     <RegisterSuccess />
