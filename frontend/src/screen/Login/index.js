@@ -4,16 +4,18 @@ import {
   Container,
   ContainerForm,
   Img,
-  Input,
+  InputItem,
   Button,
 } from './styles';
 
-export default function Login() {
+export default function Login({
+  loginUser
+}) {
   return (
     <Container>
-        <ContainerForm>
+        <ContainerForm onSubmit={(email) => loginUser(email)} >
           <Img />
-          <Input />
+          <InputItem name='email' />
           <Button>Login</Button>
         </ContainerForm>
     </Container>

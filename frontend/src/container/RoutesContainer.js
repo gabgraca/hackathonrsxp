@@ -6,16 +6,15 @@ import {
     Route,
 } from "react-router-dom"
 
-import Login from '../screen/Login'
-
 import Home from '../screen/Home'
 import RegisterUserContainer from './RegisterUserContainer'
 import CompanyList from '../screen/CompanyList'
-
+import RegisterSuccess from '../screen/RegisterSuccess'
 import List from '../screen/List'
 import VisitCotainer from './VisitContainer';
 import Visit from '../screen/Visit'
 import RegisterCompanyContainer from './RegisterCompanyContainer';
+import LoginContainer from './LoginContainer';
 
 function RoutesContainer() {
 
@@ -23,9 +22,9 @@ function RoutesContainer() {
         <Router history={history}>
             <Switch>
                 <Route path="/login">
-                    <Login />
+                    <LoginContainer />
                 </Route>
-                <Route path="/visit">
+                <Route path="/visit/:email">
                     <Visit />
                 </Route>
                 <Route path="/visitContainer/:email">
@@ -45,6 +44,9 @@ function RoutesContainer() {
                 </Route>
                 <Route path="/companylist">
                     <CompanyList />
+                </Route>
+                <Route path="/registersuccess">
+                    <RegisterSuccess />
                 </Route>
             </Switch>
         </Router>  

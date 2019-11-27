@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import logo from '../../assets/Logo.svg'
-import { Input, Form } from '@rocketseat/unform'
 
 export const Container = styled.div`
     display: flex;
@@ -10,13 +9,19 @@ export const Container = styled.div`
     height: 100vh;
 `
 
-export const ContainerForm = styled(Form)`
+export const ContainerForm = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     max-width: 400px;
     width: 100%;
+
+    strong {
+      color: #FFF;
+      font-size: 40px;
+      text-align: center;
+    }
 `
 
 export const Img = styled.img.attrs({
@@ -27,7 +32,7 @@ export const Img = styled.img.attrs({
     height: auto;
 `
 
-export const InputItem = styled(Input).attrs({
+export const Input = styled.input.attrs({
     placeholder: 'Seu email'
 })`
     width: 287px;
@@ -45,7 +50,7 @@ export const InputItem = styled(Input).attrs({
 `
 
 export const Button = styled.button.attrs({
-    type: 'submit'
+    type: 'button'
 })`
     width: 287px;
     height: 50px;

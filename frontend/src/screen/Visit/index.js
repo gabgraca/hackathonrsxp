@@ -1,5 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDate from '../../components/ReactDate'
+import { useParams } from 'react-router-dom'
+import api from '../../services/api';
+import history from '../../services/history';
 
 import { 
   Container,
@@ -10,14 +13,30 @@ import {
 } from './styles';
 import Header from '../../components/Header'
 
-function handleSubmit(data){
-  console.log(data);
-}
-export default function Visit() {
 
+
+export default function Visit() {
+  const [{ email }] = useState(useParams());
   
+  async function handleSubmit({data, vagas}){
+    // Pega o id da eampresa 
+    const empresa = await api.get(`/empresa/${email}`);
+
+    const {_id} = empresa.data;
+
+    const visita = await api.post('/oportunidade', {
+      empresa: _id,
+      vagas: vagas,
+      data: '2019-11-28',
+    })
+    
+    history.push('/registersuccess');
+
+  }
 
   return (
+    
+
     <Container className="Container">
       <Header />
 
