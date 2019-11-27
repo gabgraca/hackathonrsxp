@@ -25,7 +25,7 @@ export default function VisitCotainer() {
                  }
 
                  //TODO when user not found
-                 history.push('/')
+                 //history.push('/')
      
              } catch(error) {
                  console.log(error)
