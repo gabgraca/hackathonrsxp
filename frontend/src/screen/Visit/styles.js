@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import logo from '../../assets/Logo.svg'
 import {Form, Input} from '@rocketseat/unform';
 
 export const Container = styled.div`

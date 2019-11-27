@@ -11,6 +11,7 @@ import Login from '../screen/Login'
 import Home from '../screen/Home'
 import RegisterUserContainer from './RegisterUserContainer'
 import CompanyRegister from '../screen/CompanyRegister'
+import CompanyList from '../screen/CompanyList'
 
 import Visit from '../screen/Visit'
 
@@ -39,6 +40,9 @@ function RoutesContainer() {
                 </Route>
                 <Route path="/list">
                     <List />
+                </Route>
+                <Route path="/companylist">
+                    <CompanyList />
                 </Route>
             </Switch>
         </Router>  
